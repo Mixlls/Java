@@ -1,19 +1,16 @@
 package main;
 
 import java.awt.Graphics;
-
-import javax.xml.bind.annotation.XmlElementDecl.GLOBAL;
-
 import entities.Play;
 
 public class Game {
-    private HomePanel homePanel;
+    private GamePanel gamePanel;
     private Play play;
     public Game(){
-        homePanel = new HomePanel(this);
+        gamePanel = new GamePanel(this);
         setting();
-        new HomeWindow(homePanel);
-        homePanel.requestFocus();
+        new GameWindow(gamePanel);
+        gamePanel.requestFocus();
         startGame();
     }
     public void setting(){
